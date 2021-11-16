@@ -1,9 +1,12 @@
 import MyList from './MyList'
+import useState from 'react'
 
-function MyContainer() {
-    return (
-            <MyList/>
-        );
-  }
+const MyContainer = () => {
+    const[items, setItems] = useState([
+        { id: "1", text: "This is an item"},
+        { id: "2", text: "This is also an item"},
+        { id: "3", text: "This is also an item ':D'"}
+    ])
+}
   
   export default MyContainer;

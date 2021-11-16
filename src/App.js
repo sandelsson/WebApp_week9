@@ -19,7 +19,6 @@ function App() {
         items={[
           { id: "1", text: "This is an item"},
           { id: "2", text: "This is also an item"},
-          { id: "3", text: "This is also an item ':D'"}
         ]}
         ></MyList>
       </h2>

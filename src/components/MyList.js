@@ -1,3 +1,5 @@
+import MyContainer from './MyContainer'
+
 function MyList(props) {
     return (
         <div>
