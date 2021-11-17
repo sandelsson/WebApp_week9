@@ -14,19 +14,14 @@ function App() {
       </h1>
 
       <h2>
-        <MyList
-        header="Really epic list component"
-        items={[
-          { id: "1", text: "This is an item"},
-          { id: "2", text: "This is also an item"},
-        ]}
-        ></MyList>
+        <MyContainer/>
       </h2>
 
      
     </div>
   );
 }
+
 
 
 export default App;

@@ -1,6 +1,6 @@
-import MyContainer from './MyContainer'
 
-function MyList(props) {
+
+const MyList = (props) => {
     return (
         <div>
             <h1>
@@ -8,10 +8,11 @@ function MyList(props) {
             </h1>
             <ol>
                 {props.items.map((item) =>
-                    <li> {item.text} </li>
+                    <li key={item.id}> {item.text} </li>
                 )}
                 
             </ol>
+
 
         </div>
     )}
