@@ -17,8 +17,9 @@ function MyContainer(){
         console.log(items[index].clicked)
         items[index].clicked = true
         document.getElementById(items[index].id).setAttribute("class", "clicked")
+        document.getElementById(items[index].id).style.textDecoration = "line-through"
+        
         console.log(items[index].id)
-        //document.getElementById(items.index[id]).setAttribute("ClassName", "clicked")
         
         
     }
