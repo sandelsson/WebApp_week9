@@ -6,11 +6,26 @@ function MyContainer(){
 
 
     const[items, setItems] = useState([
-        { id: "1", text: "This is an item"},
-        { id: "2", text: "This is also an item"}
+        { id: "1", text: "This is an item", clicked: false},
+        { id: "2", text: "This is also an item", clicked: false}
     ])
 
+    const updateitem = (id) => {
+        //console.log(id.target.text)
+        //className={item.clicked ? 'clicked' :''}
+        var index = items.findIndex(x=> x.id === id); //https://www.codegrepper.com/code-examples/css/update+array+in+useState
+        console.log(items[index].clicked)
+        items[index].clicked = true
+        document.getElementById(items[index].id).setAttribute("class", "clicked")
+        console.log(items[index].id)
+        //document.getElementById(items.index[id]).setAttribute("ClassName", "clicked")
+        
+        
+    }
+
     const [inputtext, setText] = useState('')
+
+    
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -36,7 +51,7 @@ function MyContainer(){
 
     return (
         <div>
-            <MyList items={items} />
+            <MyList updateitem={updateitem} header="" items={items} />
             <div>
             <form onSubmit={onSubmit}>
                 <label></label>
@@ -57,4 +72,4 @@ function MyContainer(){
 
 
     }
-export default MyContainer;
+export default MyContainer

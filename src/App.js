@@ -1,9 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-//import React from 'react';
-import ReactDOM from 'react-dom';
 import MyContainer from './components/MyContainer.js'
-import MyList from './components/MyList';
 
 
 function App() {

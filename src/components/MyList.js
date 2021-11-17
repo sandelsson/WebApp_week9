@@ -1,14 +1,14 @@
 
 
 const MyList = (props) => {
-    return (
+        return (
         <div>
             <h1>
                 { props.header }
             </h1>
             <ol>
                 {props.items.map((item) =>
-                    <li key={item.id}> {item.text} </li>
+                    <li key={item.id} id={item.id} onClick={() => props.updateitem(item.id)} > {item.text} </li>
                 )}
                 
             </ol>
